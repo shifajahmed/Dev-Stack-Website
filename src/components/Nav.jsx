@@ -16,7 +16,7 @@ const Nav = () => {
         </ul>
 
        <div>
-      <button className="btn">Sign In</button>
+      <button className="btn ">Sign In</button>
       <button className="btn bg-[#D91B7E] rounded-3xl text-white">Sign Up</button>
        </div>
         </div>

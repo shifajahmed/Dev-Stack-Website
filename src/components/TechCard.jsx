@@ -1,7 +1,8 @@
 const TechCard = () => {
   return (
-    <div className="rounded-xl border p-5 shadow-sm">
-      Technology Card
+    <div>
+      <h2>React</h2>
+      <p>Build modern user interfaces.</p>
     </div>
   );
 };

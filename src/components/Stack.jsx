@@ -1,6 +1,6 @@
-import React from 'react';
 
-const Stack = () => {
+const Stack = ({ dataPromise }) => {
+    const allIssues = dataPromise();
     return (
         <div>
             
