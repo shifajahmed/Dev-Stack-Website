@@ -1,10 +1,13 @@
+
 import Image from "../assets/banner-stack.png";
+
 const Banner = () => {
   return (
     <section className="container mx-auto px-5 py-16">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row">
+        {/* Text Content */}
         <div className="w-full md:w-1/2">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111827]">
+          <h1 className="text-4xl font-bold leading-tight text-[#111827] md:text-5xl">
             Build Your Ideal
             <br />
             <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
@@ -35,12 +38,12 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Image */}
+        {/* Banner Image */}
         <div className="flex w-full justify-center md:w-1/2">
           <img
             src={Image}
             alt="Development technology illustration"
-            className="w-64 md:w-80 object-contain"
+            className="w-64 object-contain md:w-80"
           />
         </div>
       </div>
