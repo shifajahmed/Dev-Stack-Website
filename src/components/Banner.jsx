@@ -1,10 +1,8 @@
-import Image from '../assets/banner-stack.png'
+import Image from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <section className="container mx-auto px-5 py-16">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-
-        {/* Left Content */}
         <div className="w-full md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111827]">
             Build Your Ideal
@@ -15,12 +13,11 @@ const Banner = () => {
           </h1>
 
           <p className="mt-4 max-w-lg text-sm leading-6 text-gray-500">
-            Explore frontend, backend, database, and tooling options,
-            compare them side by side, and put together the stack that
-            fits your next project.
+            Explore frontend, backend, database, and tooling options, compare
+            them side by side, and put together the stack that fits your next
+            project.
           </p>
 
-          {/* Buttons */}
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#technologies"
@@ -38,7 +35,7 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Right Image */}
+        {/* Image */}
         <div className="flex w-full justify-center md:w-1/2">
           <img
             src={Image}
@@ -46,7 +43,6 @@ const Banner = () => {
             className="w-64 md:w-80 object-contain"
           />
         </div>
-
       </div>
     </section>
   );
