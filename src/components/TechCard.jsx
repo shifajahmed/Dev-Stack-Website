@@ -1,4 +1,4 @@
-=
+
 function TechCard({ tech, selected, onAdd }) {
   return (
     <article className="flex flex-col rounded-xl border border-slate-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
