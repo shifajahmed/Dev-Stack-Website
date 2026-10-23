@@ -16,7 +16,7 @@ function App() {
       <Nav />
       <Banner />
       <Suspense fallback={<Loading />}>
-        <MainLayout dataPromise={dataPromise} />
+        <MainLayout dataPromise={dataPromise()} />
       </Suspense>
     </>
   );
