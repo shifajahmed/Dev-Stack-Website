@@ -44,7 +44,7 @@ const AllIssues = ({
         </div>
       </section>
 
-      {/* Your Stack */}
+     
       <aside className="col-span-12 md:col-span-3">
         <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
           <h2 className="mb-1 text-xl font-bold text-slate-900">
@@ -61,9 +61,6 @@ const AllIssues = ({
             </div>
           ) : (
             <div className="mt-4 space-y-2">
-
-
-
               {completedIssues.map((issue) => (
                 <div
                   key={issue.id}
