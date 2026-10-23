@@ -18,6 +18,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <MainLayout dataPromise={dataPromise()} />
       </Suspense>
+      <Loading />
     </>
   );
 }
