@@ -8,7 +8,7 @@ const MainLayout = ({ dataPromise }) => {
 
   const handleRemoveSingle = (id) => {
     setCompletedIssues((previousIssues) =>
-      previousIssues.filter((item) => item.id !== id)
+      previousIssues.filter((item) => item.id !== id),
     );
   };
 
@@ -19,11 +19,11 @@ const MainLayout = ({ dataPromise }) => {
   return (
     <div className="container mx-auto grid grid-cols-12 gap-6 p-4">
       <section className="col-span-12 md:col-span-9">
-        <h2 className="mb-1 text-3xl font-extrabold text-slate-900 md:text-4xl">
+        <h2 className="mb-1 whitespace-nowrap text-center text-2xl font-extrabold text-slate-900 md:text-left md:text-4xl">
           Explore{" "}
-          <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
             Technologies
-          </span>
+          </span> 
         </h2>
 
         <p className="mb-6 text-sm text-slate-500 md:text-base">

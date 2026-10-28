@@ -1,4 +1,3 @@
-import React from "react";
 import IssueCard from "./IssueCard";
 import Counter from "../Counter";
 

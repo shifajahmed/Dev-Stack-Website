@@ -32,7 +32,6 @@ const Nav = () => {
           ))}
         </ul>
 
-        
         <div className="hidden items-center gap-4 text-xs font-medium md:flex">
           <a href="#signin" className="text-pink-600 hover:text-pink-700">
             Sign In
@@ -46,7 +45,6 @@ const Nav = () => {
           </a>
         </div>
 
-  
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
