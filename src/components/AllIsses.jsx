@@ -22,7 +22,7 @@ const AllIssues = ({
       <section className="col-span-12 md:col-span-9">
         <h2 className="mb-1 text-3xl font-extrabold text-slate-900 md:text-4xl">
           Explore{" "}
-          <span className="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>

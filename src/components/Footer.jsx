@@ -10,7 +10,7 @@ function Footer() {
             Curated tools, technologies, and resources for developers
             building modern software.
           </p>
-          <p className="mt-4 text-xs font-bold">
+          <p className="mt-4 text-xs font-semibold">
             GitHub · Twitter · LinkedIn
           </p>
         </div>

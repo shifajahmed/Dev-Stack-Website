@@ -4,8 +4,7 @@ import Footer from "./components/Footer";
 import MainLayout from "./MainLayout";
 import { Suspense } from "react";
 import Loading from "./Loading";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const dataPromise = async () => {
   const res = await fetch("/data.json");
