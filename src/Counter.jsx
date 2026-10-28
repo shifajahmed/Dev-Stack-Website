@@ -1,5 +1,3 @@
-import React from "react";
-
 const Counter = ({ completedIssues = [] }) => {
   const count = completedIssues.length;
 
@@ -14,7 +12,7 @@ const Counter = ({ completedIssues = [] }) => {
   return (
     <p className="text-xs font-medium text-slate-500">
       <span className="font-bold text-slate-800">{count}</span>{" "}
-      {count === 0 ? "Technology" : "Technologies"} Selected
+      {count === 1 ? "Technology" : "Technologies"} Selected
     </p>
   );
 };

@@ -7,7 +7,7 @@ const Loading = () => {
 
         <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-blue-500 border-r-violet-500"></div>
 
-        <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-violet-600 opacity-80 blur-md"></div>
+        <div className="h-10 w-10 rounded-full bg-linear-to-br from-blue-500 to-violet-600 opacity-80 blur-md"></div>
 
         <div className="absolute h-3 w-3 rounded-full bg-white shadow-lg shadow-blue-400"></div>
       </div>

@@ -9,7 +9,7 @@ const AllIssues = ({
 }) => {
   const handleRemoveSingle = (id) => {
     setCompletedIssues((previousIssues) =>
-      previousIssues.filter((item) => item.id !== id)
+      previousIssues.filter((item) => item.id !== id),
     );
   };
 
@@ -19,7 +19,6 @@ const AllIssues = ({
 
   return (
     <div className="container mx-auto grid grid-cols-12 gap-6 p-4">
-      {/* Explore Technologies */}
       <section className="col-span-12 md:col-span-9">
         <h2 className="mb-1 text-3xl font-extrabold text-slate-900 md:text-4xl">
           Explore{" "}
@@ -44,20 +43,15 @@ const AllIssues = ({
         </div>
       </section>
 
-     
       <aside className="col-span-12 md:col-span-3">
         <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
-          <h2 className="mb-1 text-xl font-bold text-slate-900">
-            Your Stack
-          </h2>
+          <h2 className="mb-1 text-xl font-bold text-slate-900">Your Stack</h2>
 
           <Counter completedIssues={completedIssues} />
 
           {completedIssues.length === 0 ? (
             <div className="mt-4 flex min-h-24 items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 text-center">
-              <p className="text-xs text-slate-400">
-                Your stack is empty.
-              </p>
+              <p className="text-xs text-slate-400">Your stack is empty.</p>
             </div>
           ) : (
             <div className="mt-4 space-y-2">

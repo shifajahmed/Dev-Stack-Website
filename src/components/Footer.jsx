@@ -1,18 +1,16 @@
-
+import logo from "../assets/logo-text.png";
 function Footer() {
   return (
-    <footer id="about" className="border-t border-slate-100">
+    <footer id="about" className="border-t border-slate-100 mt-4">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
 
         <div className="col-span-2 md:col-span-1">
-          <a href="#home" className="font-bold text-slate-900">
-            DS Dev <span className="text-pink-500">Stack</span>
-          </a>
+          <img src={logo} alt="Logo" />
           <p className="mt-4 max-w-xs text-xs leading-6 text-slate-500">
             Curated tools, technologies, and resources for developers
             building modern software.
           </p>
-          <p className="mt-4 text-xs text-slate-500">
+          <p className="mt-4 text-xs font-bold">
             GitHub · Twitter · LinkedIn
           </p>
         </div>

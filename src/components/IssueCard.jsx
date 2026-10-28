@@ -1,26 +1,20 @@
-import React from "react";
-
-const IssueCard = ({
-  issue,
-  completedIssues = [],
-  setCompletedIssues,
-}) => {
-  const isSelected = completedIssues.some(
-    (item) => item.id === issue.id
-  );
+import { toast } from "react-toastify";
+const IssueCard = ({ issue, completedIssues = [], setCompletedIssues }) => {
+  const isSelected = completedIssues.some((item) => item.id === issue.id);
 
   const handleAddToStack = () => {
-    setCompletedIssues((previousIssues) => {
-      const alreadyExists = previousIssues.some(
-        (item) => item.id === issue.id
-      );
+    const alreadyExists = completedIssues.some((item) => item.id === issue.id);
 
-      if (alreadyExists) {
-        return previousIssues;
-      }
+    if (alreadyExists) {
+      toast.error("This technology is already in your stack!");
+      return;
+    }
 
-      return [...previousIssues, issue];
-    });
+    setCompletedIssues((previousIssues) => [...previousIssues, issue]);
+
+    toast.success(
+      `${issue.name || issue.title || "Technology"} added to your stack!`,
+    );
   };
 
   return (
