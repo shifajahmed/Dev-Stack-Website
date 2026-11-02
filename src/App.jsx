@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
