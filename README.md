@@ -38,15 +38,15 @@ Props are used to pass data from a parent component to a child component. State 
 
 ### 3. What does the `useState` hook do, and where did you use it in this project?
 
-The `useState` hook helps us store and update data in a component. I used it to manage selected technologies, the mobile menu, and password visibility.
+The useState hook helps us store and update data in a component. I used it to manage selected technologies, the mobile menu, and password visibility.
 
 ### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
-The `useEffect` hook is used to handle side effects in React, such as fetching data. In my project, I used `fetch()`, `Suspense`, and the `use()` API to load JSON data instead of `useEffect`.
+The useEffect hook is used to handle side effects in React, such as fetching data. In my project, I used fetch(), Suspense, and the use() API to load JSON data instead of useEffect.
 
 ### 5. Why does every item in a `.map()` list need a unique `key` prop?
 
-A unique `key` helps React identify each item in a list. It helps React update the correct items when the list changes.
+A unique key helps React identify each item in a list. It helps React update the correct items when the list changes.
 
 ### 6. What is conditional rendering? Show one place you used it (example: the empty stack message).
 
@@ -57,9 +57,3 @@ Conditional rendering means showing different content based on a condition. I us
 We can pass data from a parent to a child using props. A child can send information back by calling a function passed from the parent through props.
 
 ---
-
-## 👨‍💻 Author
-
-**Shifaj Ahmed Rahim**
-
-GitHub: [@shifajahmed](https://github.com/shifajahmed)
