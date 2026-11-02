@@ -3,12 +3,11 @@ function Footer() {
   return (
     <footer id="about" className="border-t border-slate-100 mt-4">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-5 py-12 md:grid-cols-4">
-
         <div className="col-span-2 md:col-span-1">
           <img src={logo} alt="Logo" />
           <p className="mt-4 max-w-xs text-xs leading-6 text-slate-500">
-            Curated tools, technologies, and resources for developers
-            building modern software.
+            Curated tools, technologies, and resources for developers building
+            modern software.
           </p>
           <p className="mt-4 text-xs font-semibold">
             GitHub · Twitter · LinkedIn

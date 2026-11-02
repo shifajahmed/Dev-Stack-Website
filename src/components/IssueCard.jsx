@@ -73,7 +73,7 @@ const IssueCard = ({ issue, completedIssues = [], setCompletedIssues }) => {
               : "bg-[#0B0F19] text-white hover:bg-slate-800"
           }`}
         >
-          {isSelected ? "Added to Stack" : "Add to Stack"}
+          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>

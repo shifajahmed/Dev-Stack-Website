@@ -1,28 +1,57 @@
+import { Routes, Route } from "react-router-dom";
+import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import MainLayout from "./MainLayout";
-import { Suspense } from "react";
+import SignIn from "./components/SignIn";
 import Loading from "./Loading";
-import { ToastContainer } from "react-toastify";
 
-const dataPromise = async () => {
-  const res = await fetch("/data.json");
-  const data = await res.json();
-  return data;
-};
+const dataPromise = fetch("/data.json").then((res) => {
+  if (!res.ok) {
+    throw new Error("Failed to load data.json");
+  }
+  return res.json();
+});
 
-function App() {
+function Home() {
   return (
     <>
       <Nav />
       <Banner />
+
       <Suspense fallback={<Loading />}>
-        <MainLayout dataPromise={dataPromise()} />
+        <MainLayout dataPromise={dataPromise} />
       </Suspense>
-      <ToastContainer />
-      {/* <Loading /> */}
+
       <Footer />
+    </>
+  );
+}
+
+function AuthPage() {
+  return (
+    <>
+      <Nav />
+      <SignIn />
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<AuthPage />} />
+        <Route path="/signup" element={<AuthPage />} />
+      </Routes>
+
+      <ToastContainer />
     </>
   );
 }

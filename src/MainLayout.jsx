@@ -1,4 +1,6 @@
+
 import { use, useState } from "react";
+import { toast } from "react-toastify";
 import IssueCard from "./components/IssueCard";
 import Counter from "./Counter";
 
@@ -6,14 +8,26 @@ const MainLayout = ({ dataPromise }) => {
   const allIssues = use(dataPromise);
   const [completedIssues, setCompletedIssues] = useState([]);
 
+  // Remove Single Technology
   const handleRemoveSingle = (id) => {
+    const removedIssue = completedIssues.find(
+      (item) => item.id === id
+    );
+
     setCompletedIssues((previousIssues) =>
-      previousIssues.filter((item) => item.id !== id),
+      previousIssues.filter((item) => item.id !== id)
+    );
+
+    toast.info(
+      `${removedIssue?.name || removedIssue?.title || "Technology"} removed from your stack!`
     );
   };
 
+  // Remove All Technologies
   const handleRemoveAll = () => {
     setCompletedIssues([]);
+
+    toast.success("All technologies removed from your stack!");
   };
 
   return (
@@ -23,7 +37,7 @@ const MainLayout = ({ dataPromise }) => {
           Explore{" "}
           <span className="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
             Technologies
-          </span> 
+          </span>
         </h2>
 
         <p className="mb-6 text-sm text-slate-500 md:text-base">
@@ -44,13 +58,17 @@ const MainLayout = ({ dataPromise }) => {
 
       <aside className="col-span-12 md:col-span-3">
         <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
-          <h2 className="mb-1 text-xl font-bold text-slate-900">Your Stack</h2>
+          <h2 className="mb-1 text-xl font-bold text-slate-900">
+            Your Stack
+          </h2>
 
           <Counter completedIssues={completedIssues} />
 
           {completedIssues.length === 0 ? (
             <div className="mt-4 flex min-h-24 items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50 p-4 text-center">
-              <p className="text-xs text-slate-400">Your stack is empty.</p>
+              <p className="text-xs text-slate-400">
+                Your stack is empty.
+              </p>
             </div>
           ) : (
             <div className="mt-4 space-y-2">
@@ -68,9 +86,15 @@ const MainLayout = ({ dataPromise }) => {
                       />
                     )}
 
-                    <span className="truncate text-xs font-semibold text-slate-800">
-                      {issue.name || issue.title || "Unnamed Technology"}
-                    </span>
+                    <div className="min-w-0">
+                      <span className="block truncate text-xs font-semibold text-slate-800">
+                        {issue.name || issue.title || "Unnamed Technology"}
+                      </span>
+
+                      <span className="text-xs text-slate-500">
+                        {issue.category}
+                      </span>
+                    </div>
                   </div>
 
                   <button

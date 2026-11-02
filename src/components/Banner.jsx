@@ -1,5 +1,6 @@
 import Image from "../assets/banner-stack.png";
 
+
 const Banner = () => {
   return (
     <section className="container mx-auto px-5 py-16">
