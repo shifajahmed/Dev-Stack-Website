@@ -25,7 +25,6 @@ function Home() {
       <Suspense fallback={<Loading />}>
         <MainLayout dataPromise={dataPromise} />
       </Suspense>
-
       <Footer />
     </>
   );
